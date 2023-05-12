@@ -13,9 +13,13 @@ namespace TestSimulado
             /*
             Exercicios.Ex1();
             Console.ReadKey();
-            */
+            
 
             Exercicios.Ex2();
+            Console.ReadKey();
+            */
+
+            Exercicios.Ex3();
             Console.ReadKey();
 
         }
@@ -91,6 +95,64 @@ namespace TestSimulado
 
             }
 
+        }
+
+        public static void Ex3()
+        {
+            Console.WriteLine("Digite uma lista de números, os separando por espaço");
+           string[] lista = Console.ReadLine().Split(' ');
+
+            double[] numeros = new double[lista.Length];
+            
+            /* Eu até tentei, mas não consegui realizar a atividade sem o uso de métodos.
+             * Peço a compreensão do professor.
+            double menor = 0;
+            double maior = 0;
+
+            for(int i = 0; i < lista.Length;i++)
+            {
+                double numero = double.Parse(lista[i]);
+                if(i == 0)
+                {
+                    numeros[i] = numero;
+                    numeros[numeros.Length - 1] = numero;
+
+                    menor = numero;
+                    maior = numero;
+                }
+
+                else if(i > 0)
+                {
+                    if(numero < menor)
+                    {
+                        menor = numero;
+                        numeros[0] = numero;
+                    }
+
+                    if(numero > maior)
+                    {
+                        maior = numero;
+                        numeros[numeros.Length - 1] = numero;
+                    }
+
+                    else
+                    {
+                        numeros[i] = numero;
+                    }
+                }*/
+            
+
+            for(int i = 0; i < lista.Length; ++i)
+            {
+                numeros[i] = double.Parse(lista[i]);
+            }
+
+           Array.Sort(numeros);
+
+            for(int i = 0;i < lista.Length;i++)
+            {
+                Console.WriteLine(numeros[i]);
+            }
         }
     }
 }
