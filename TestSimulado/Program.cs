@@ -10,8 +10,12 @@ namespace TestSimulado
     {
         static void Main(string[] args)
         {
-
+            /*
             Exercicios.Ex1();
+            Console.ReadKey();
+            */
+
+            Exercicios.Ex2();
             Console.ReadKey();
 
         }
@@ -67,6 +71,25 @@ namespace TestSimulado
 
 
 
+
+        }
+
+        public static void Ex2()
+        {
+            Console.WriteLine("Digite uma palavra para ser lida");
+            string palavra = Console.ReadLine();
+
+            string reversa = new string(palavra.Reverse().ToArray());
+
+            if(palavra == reversa)
+            {
+                Console.WriteLine("A string " + palavra + " é um palíndromo");
+            }
+            else
+            {
+                Console.WriteLine("A string " + palavra + " não é um palíndromo");
+
+            }
 
         }
     }
